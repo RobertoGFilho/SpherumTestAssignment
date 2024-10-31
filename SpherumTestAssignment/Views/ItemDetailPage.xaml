@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SpherumTestAssignment.Views.ItemDetailPage"
+    Title="Details"
+    Padding="24">
+    <ScrollView>
+        <StackLayout Spacing="3">
+            <Label Text="Name" />
+            <Label Text="{Binding Item.Name}" FontSize="Large" />
+
+            <Label Text="Description" />
+            <Label Text="{Binding Item.Description}" FontSize="Large" />
+
+            <Label Text="Created Date" />
+            <Label Text="{Binding Item.CreatedDate, StringFormat='Created on: {0:MM/dd/yyyy}'}" FontSize="Large" />
+
+            <Label Text="Is Active" />
+            <Label Text="{Binding Item.IsActive, Converter={StaticResource BooleanToTextConverter}}" FontSize="Large" />
+
+            <Label Text="Category"  />
+            <Label Text="{Binding Item.Category}" FontSize="Large" />
+
+            <Label Text="Price" />
+            <Label Text="{Binding Item.Price, StringFormat='Price: {0:C}'}" FontSize="Large" />
+
+            <Label Text="Quantity"  />
+            <Label Text="{Binding Item.Quantity}" FontSize="Large" />
+
+            <Label Text="Manufacturer" />
+            <Label Text="{Binding Item.Manufacturer}" FontSize="Large" />
+
+            <Label Text="SKU" />
+            <Label Text="{Binding Item.SKU}" FontSize="Large" />
+
+            <Label Text="Rating" />
+            <Label Text="{Binding Item.Rating, StringFormat='Rating: {0}/5'}" FontSize="Large" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

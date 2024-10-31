@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SpherumTestAssignment.Views.FormPage"
+    Title="Form">
+    <ScrollView>
+        <StackLayout
+            Spacing="12"
+            Margin="12">
+            <Entry Placeholder="Name" Text="{Binding Name}" />
+            <Entry Placeholder="Email" Text="{Binding Email}" />
+            <Entry Placeholder="Description" Text="{Binding Description}" />
+            <Entry Placeholder="Category" Text="{Binding Category}" />
+            <Entry Placeholder="Price" Text="{Binding Price}" />
+            <Entry Placeholder="Quantity" Text="{Binding Quantity}" />
+            <Entry Placeholder="Manufacturer" Text="{Binding Manufacturer}" />
+            <Entry Placeholder="SKU" Text="{Binding SKU}" />
+            <Entry Placeholder="Rating" Text="{Binding Rating}" />
+            <Button Text="Send" Command="{Binding SendCommand}" 
+                    Margin="0,12,0,0"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

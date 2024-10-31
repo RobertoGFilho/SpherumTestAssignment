@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="SpherumTestAssignment.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SpherumTestAssignment"
+    xmlns:views="clr-namespace:SpherumTestAssignment.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Title="Spherum Test Assignment">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate views:ItemListPage}"
+        Route="ItemListPage" />
+
+</Shell>

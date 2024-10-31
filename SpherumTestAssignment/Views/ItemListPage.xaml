@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:SpherumTestAssignment.Converters"
+    x:Class="SpherumTestAssignment.Views.ItemListPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:IsSelectedToColorConverter x:Key="IsSelectedToColorConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Command="{Binding GoToFormPageCommand}" />
+    </ContentPage.ToolbarItems>
+
+    <CollectionView ItemsSource="{Binding Items}"
+                    RemainingItemsThreshold="5"
+                    RemainingItemsThresholdReachedCommand="{Binding LoadMoreItemsCommand}"
+                    SelectionMode="Single"
+                    SelectionChanged="CollectionView_SelectionChanged"
+                    Margin="10">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Border Padding="10" Margin="5" Stroke="{Binding IsSelected, Converter={StaticResource IsSelectedToColorConverter}}" StrokeThickness="1" BackgroundColor="White" StrokeShape="RoundRectangle 8">
+                    <VerticalStackLayout>
+                        <Label Text="{Binding Name}" FontSize="Large" />
+                        <Label Text="{Binding Description}" />
+                        <Label Text="{Binding Price}" />
+                    </VerticalStackLayout>
+                </Border>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>
